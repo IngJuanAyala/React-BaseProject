@@ -1,0 +1,74 @@
+Instalación y configuración de entorno para trabajar con React.js
+
+1- Crear carperta y Ejecutar git init 
+2- Crear archivo package.json con comando npm init -y donde está la información básica del proyecto.
+3- Iniciar proyecto con vs.code
+4- Crear carpeta: src/components. Dentro de la caperta src, deberá ir todo el código fuente que hagamos en el proyecto.
+5- En laa ruta del proyecto, ejecutar los comandos para instalación de react: npm install react react-dom
+6- Dentro de carpeta srm, hacer creación de archivo index.js donde se deberá importar react y reacr dom.
+6- Crear carpeta public en el mismo nivel de carpeta src y dentro, crear archivo index.html.
+
+
+Instalación de Babel. --> Tranformación de js compatible con todos los navegadores.
+
+6- En ruta del proyecto, ejecutar:
+babel-core--> todas las herramientas para transformar js a código moderno.
+babel-loader---> se encarga de trabajar con web pack.
+babel preset--> encargado de entender y transformar nuestro código.
+
+npm install @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+
+7- en la raiz del proyecto, crear archivo llamado: .babelrc
+
+agregar dentro del archivo:
+
+{
+	"presets": [
+		"@babel/preset-env",
+		"@babel/preset-react"
+	]
+}
+
+Instalación y configuración de Web Pack (Producción)--> Webpack es una herramienta que nos ayuda a compilar multiples archivos (JavaScript, HTML, CSS, imágenes) en uno solo (o a veces un poco más) que tendrá todo nuestro código listo para producción.
+
+8- el la raiz del proyecto, ejecutar el siguiente código:
+
+npm install webpack webpack-cli html-webpack-plugin html-loader  --save-dev
+
+9- Crear en raiz del proyecto, archivo webpack.config.json y agregar configuración correspondiente (ver proyecto base).
+10 - En package.json, se deberá agregar dentro de sección scritps, el script siguiente, necesario para compilar el proyecto:
+
+{
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+}
+
+11- Por último, se deberá ejecutar en consola el siguiente código:
+
+npm run build
+
+Se deberá crear automáticamente la carpeta dist
+
+Instalación y configuración de Web pack (Desarrollo)
+
+11 - El la raiz del proyecto, ejecutar el siguiente código:
+
+npm install --save-dev webpack-dev-server
+
+12 - En package.json, se deberá agregar dentro de sección scritps, el script siguiente, necesario para compilar el proyecto:
+
+"start": "webpack-dev-server --open --mode development"
+
+
+Instalación y configuración de Git Ignore y eslint:
+
+-->> git ignore--> ignorar archivos con los que trabajamos en nuestro ambiente, pero que no queremos que sean subidos a nuestro repositorio: ejemplo: node_modules.
+-->> eslint--> Herramienta de ayuda para identificación de errores.
+
+13 - Ejecutar en consola el sigueinte código:
+
+npm install --save-dev eslint babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y
+
+
+
