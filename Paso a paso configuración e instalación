@@ -71,4 +71,16 @@ Instalación y configuración de Git Ignore y eslint:
 npm install --save-dev eslint babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y
 
 
+Instalación y configuración de Styled components:
+
+Styled Components es una herramienta que nos ayuda a usar lo mejor de CSS en JavaScript y React.
+Para usar esta herramienta solo debes seguir los siguientes pasos:
+
+14 - ejecutar el siguiente comando en la consola en la raiz del proyecto:
+
+npm install --save styled-components
+
+
+
+
 
